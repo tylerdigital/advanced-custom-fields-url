@@ -27,8 +27,8 @@ This template uses `PLACEHOLDERS` such as `url` throughout the file names and co
 * `PLUGIN_TAGS`: Comma seperated list of relevant tags
 * `DESCRIPTION`: Brief description of the field type, no longer than 2 lines
 * `EXTENDED_DESCRIPTION`: Extended description of the field type
-* `AUTHOR_NAME`: Name of field type author
-* `AUTHOR_URL`: URL to author's website
+* `Tyler Digital`: Name of field type author
+* `http://tylerdigital.com`: URL to author's website
 
 ### step 2.
 
