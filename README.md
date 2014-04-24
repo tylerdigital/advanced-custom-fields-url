@@ -22,7 +22,7 @@ http://www.advancedcustomfields.com/resources/tutorials/creating-a-new-field-typ
 This template uses `PLACEHOLDERS` such as `url` throughout the file names and code. Use the following list of placeholders to do a 'find and replace':
 
 * `url`: Single word, no spaces. Underscores allowed. eg. donate_button
-* `FIELD_LABEL`: Multiple words, can include spaces, visible when selecting a field type. eg. Donate Button
+* `URL`: Multiple words, can include spaces, visible when selecting a field type. eg. Donate Button
 * `PLUGIN_URL`: Url to the github or WordPress repository
 * `PLUGIN_TAGS`: Comma seperated list of relevant tags
 * `DESCRIPTION`: Brief description of the field type, no longer than 2 lines
@@ -42,7 +42,7 @@ Edit this `README.md` file with the appropriate information and delete all conte
 
 -----------------------
 
-# ACF FIELD_LABEL Field
+# ACF URL Field
 
 DESCRIPTION
 
@@ -61,8 +61,8 @@ This ACF field type is compatible with:
 ### Installation
 
 1. Copy the `acf-url` folder into your `wp-content/plugins` folder
-2. Activate the FIELD_LABEL plugin via the plugins admin page
-3. Create a new field via ACF and select the FIELD_LABEL type
+2. Activate the URL plugin via the plugins admin page
+3. Create a new field via ACF and select the URL type
 4. Please refer to the description for more info regarding the field type settings
 
 ### Changelog

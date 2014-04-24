@@ -20,7 +20,7 @@ class acf_field_url extends acf_field {
 	{
 		// vars
 		$this->name = 'url';
-		$this->label = __('FIELD_LABEL');
+		$this->label = __('URL');
 		$this->category = __("Basic",'acf'); // Basic, Content, Choice, etc
 		$this->defaults = array(
 			// add default here to merge into your field. 

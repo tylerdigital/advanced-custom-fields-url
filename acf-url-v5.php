@@ -29,7 +29,7 @@ class acf_field_url extends acf_field {
 		*  label (string) Multiple words, can include spaces, visible when selecting a field type
 		*/
 		
-		$this->label = __('FIELD_LABEL', 'acf-url');
+		$this->label = __('URL', 'acf-url');
 		
 		
 		/*
