@@ -1,6 +1,6 @@
 <?php
 
-class acf_field_FIELD_NAME extends acf_field {
+class acf_field_url extends acf_field {
 	
 	// vars
 	var $settings, // will hold info such as dir / path
@@ -19,7 +19,7 @@ class acf_field_FIELD_NAME extends acf_field {
 	function __construct()
 	{
 		// vars
-		$this->name = 'FIELD_NAME';
+		$this->name = 'url';
 		$this->label = __('FIELD_LABEL');
 		$this->category = __("Basic",'acf'); // Basic, Content, Choice, etc
 		$this->defaults = array(
@@ -145,18 +145,18 @@ class acf_field_FIELD_NAME extends acf_field {
 		
 		
 		// register ACF scripts
-		wp_register_script( 'acf-input-FIELD_NAME', $this->settings['dir'] . 'js/input.js', array('acf-input'), $this->settings['version'] );
-		wp_register_style( 'acf-input-FIELD_NAME', $this->settings['dir'] . 'css/input.css', array('acf-input'), $this->settings['version'] ); 
+		wp_register_script( 'acf-input-url', $this->settings['dir'] . 'js/input.js', array('acf-input'), $this->settings['version'] );
+		wp_register_style( 'acf-input-url', $this->settings['dir'] . 'css/input.css', array('acf-input'), $this->settings['version'] ); 
 		
 		
 		// scripts
 		wp_enqueue_script(array(
-			'acf-input-FIELD_NAME',	
+			'acf-input-url',	
 		));
 
 		// styles
 		wp_enqueue_style(array(
-			'acf-input-FIELD_NAME',	
+			'acf-input-url',	
 		));
 		
 		
@@ -372,6 +372,6 @@ class acf_field_FIELD_NAME extends acf_field {
 
 
 // create field
-new acf_field_FIELD_NAME();
+new acf_field_url();
 
 ?>

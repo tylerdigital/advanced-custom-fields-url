@@ -12,16 +12,16 @@ http://www.advancedcustomfields.com/resources/tutorials/creating-a-new-field-typ
 * `/images`: folder for image files
 * `/js`: folder for .js files
 * `/lang`: folder for .pot, .po and .mo files
-* `acf-FIELD_NAME.php`: Main plugin file that includes the correct field file based on the ACF version
-* `FIELD_NAME-v5.php`: Field class compatible with ACF version 5 
-* `FIELD_NAME-v4.php`: Field class compatible with ACF version 4
+* `acf-url.php`: Main plugin file that includes the correct field file based on the ACF version
+* `url-v5.php`: Field class compatible with ACF version 5 
+* `url-v4.php`: Field class compatible with ACF version 4
 * `readme.txt`: WordPress readme file to be used by the wordpress repository
 
 ### step 1.
 
-This template uses `PLACEHOLDERS` such as `FIELD_NAME` throughout the file names and code. Use the following list of placeholders to do a 'find and replace':
+This template uses `PLACEHOLDERS` such as `url` throughout the file names and code. Use the following list of placeholders to do a 'find and replace':
 
-* `FIELD_NAME`: Single word, no spaces. Underscores allowed. eg. donate_button
+* `url`: Single word, no spaces. Underscores allowed. eg. donate_button
 * `FIELD_LABEL`: Multiple words, can include spaces, visible when selecting a field type. eg. Donate Button
 * `PLUGIN_URL`: Url to the github or WordPress repository
 * `PLUGIN_TAGS`: Comma seperated list of relevant tags
@@ -32,7 +32,7 @@ This template uses `PLACEHOLDERS` such as `FIELD_NAME` throughout the file names
 
 ### step 2.
 
-Edit the `FIELD_NAME-v5.php` and `FIELD_NAME-v4.php` files (now renamed using your field name) and include your custom code in the appropriate functions. 
+Edit the `url-v5.php` and `url-v4.php` files (now renamed using your field name) and include your custom code in the appropriate functions. 
 Please note that v4 and v5 field classes have slightly different functions. For more information, please read:
 * http://www.advancedcustomfields.com/resources/tutorials/creating-a-new-field-type/
 
@@ -60,7 +60,7 @@ This ACF field type is compatible with:
 
 ### Installation
 
-1. Copy the `acf-FIELD_NAME` folder into your `wp-content/plugins` folder
+1. Copy the `acf-url` folder into your `wp-content/plugins` folder
 2. Activate the FIELD_LABEL plugin via the plugins admin page
 3. Create a new field via ACF and select the FIELD_LABEL type
 4. Please refer to the description for more info regarding the field type settings

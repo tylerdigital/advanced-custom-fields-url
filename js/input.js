@@ -24,8 +24,8 @@
 	
 	acf.add_action('ready append', function( $el ){
 		
-		// search $el for fields of type 'FIELD_NAME'
-		acf.get_fields({ type : 'FIELD_NAME'}, $el).each(function(){
+		// search $el for fields of type 'url'
+		acf.get_fields({ type : 'url'}, $el).each(function(){
 			
 			initialize_field( $(this) );
 			
@@ -51,7 +51,7 @@
 	
 	$(document).live('acf/setup_fields', function(e, postbox){
 		
-		$(postbox).find('.field[data-field_type="FIELD_NAME"]').each(function(){
+		$(postbox).find('.field[data-field_type="url"]').each(function(){
 			
 			initialize_field( $(this) );
 			
