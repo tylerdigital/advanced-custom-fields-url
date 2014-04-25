@@ -89,14 +89,6 @@ class acf_field_url extends acf_field {
 		*  Please note that you must also have a matching $defaults value for the field name (font_size)
 		*/
 		
-		acf_render_field_setting( $field, array(
-			'label'			=> __('Font Size','acf-url'),
-			'instructions'	=> __('Customise the input font size','acf-url'),
-			'type'			=> 'number',
-			'name'			=> 'font_size',
-			'prepend'		=> 'px',
-		));
-
 	}
 	
 	
@@ -116,25 +108,14 @@ class acf_field_url extends acf_field {
 	*  @return	n/a
 	*/
 	
-	function render_field( $field ) {
-		
-		
-		/*
-		*  Review the data of $field.
-		*  This will show what data is available
-		*/
-		
-		echo '<pre>';
-			print_r( $field );
-		echo '</pre>';
-		
+	function render_field( $field ) {		
 		
 		/*
 		*  Create a simple text input using the 'font_size' setting.
 		*/
 		
 		?>
-		<input type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
+		<input type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" />
 		<?php
 	}
 	
@@ -340,15 +321,26 @@ class acf_field_url extends acf_field {
 	*  @return	$value
 	*/
 	
-	/*
-	
-	function update_value( $value, $post_id, $field ) {
-		
+	function update_value($value, $post_id, $field)
+	{
+		/* Auto prefix URLs with http:// if omitted */
+		if (
+			!empty( $value )
+				&&
+				strpos( $value, '#' ) !== 0
+				&&
+				strpos( $value, 'http://' ) === false
+				&&
+				strpos( $value, 'https://' ) === false
+				&&
+				strpos( $value, 'mailto:' ) === false
+		) {
+			$value = 'http://'.$value;
+		}
+
 		return $value;
-		
 	}
-	
-	*/
+
 	
 	
 	/*
@@ -400,32 +392,21 @@ class acf_field_url extends acf_field {
 	*  @param	$input (string) the corresponding input name for $_POST value
 	*  @return	$valid
 	*/
-	
-	/*
-	
+		
 	function validate_value( $valid, $value, $field, $input ){
-		
-		// Basic usage
-		if( $value < $field['custom_minimum_setting'] )
-		{
-			$valid = false;
+		/* Auto prefix URLs with http:// if omitted */
+		if ( !empty( $value )
+			&& strpos( $value, '#' ) !== 0
+			&& strpos( $value, '.' ) === false
+		) {
+			$valid = __('Please enter a valid URL','acf-url');
 		}
-		
-		
-		// Advanced usage
-		if( $value < $field['custom_minimum_setting'] )
-		{
-			$valid = __('The value is too little!','acf-url'),
-		}
-		
 		
 		// return
 		return $valid;
 		
 	}
-	
-	*/
-	
+
 	
 	/*
 	*  delete_value()
