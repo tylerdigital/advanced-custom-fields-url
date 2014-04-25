@@ -40,61 +40,7 @@ class acf_field_url extends acf_field {
 			'version' => '1.0.0'
 		);
 
-	}
-	
-	
-	/*
-	*  create_options()
-	*
-	*  Create extra options for your field. This is rendered when editing a field.
-	*  The value of $field['name'] can be used (like below) to save extra data to the $field
-	*
-	*  @type	action
-	*  @since	3.6
-	*  @date	23/01/13
-	*
-	*  @param	$field	- an array holding all the field's data
-	*/
-	
-	function create_options( $field )
-	{
-		// defaults?
-		/*
-		$field = array_merge($this->defaults, $field);
-		*/
-		
-		// key is needed in the field names to correctly save the data
-		$key = $field['name'];
-		
-		
-		// Create Field Options HTML
-		?>
-<tr class="field_option field_option_<?php echo $this->name; ?>">
-	<td class="label">
-		<label><?php _e("Preview Size",'acf'); ?></label>
-		<p class="description"><?php _e("Thumbnail is advised",'acf'); ?></p>
-	</td>
-	<td>
-		<?php
-		
-		do_action('acf/create_field', array(
-			'type'		=>	'radio',
-			'name'		=>	'fields['.$key.'][preview_size]',
-			'value'		=>	$field['preview_size'],
-			'layout'	=>	'horizontal',
-			'choices'	=>	array(
-				'thumbnail' => __('Thumbnail'),
-				'something_else' => __('Something Else'),
-			)
-		));
-		
-		?>
-	</td>
-</tr>
-		<?php
-		
-	}
-	
+	}	
 	
 	/*
 	*  create_field()
@@ -121,7 +67,7 @@ class acf_field_url extends acf_field {
 		// create Field HTML
 		?>
 		<div>
-			
+		<input type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" />	
 		</div>
 		<?php
 	}
@@ -258,7 +204,21 @@ class acf_field_url extends acf_field {
 	
 	function update_value( $value, $post_id, $field )
 	{
-		// Note: This function can be removed if not used
+		/* Auto prefix URLs with http:// if omitted */
+		if (
+			!empty( $value )
+				&&
+				strpos( $value, '#' ) !== 0
+				&&
+				strpos( $value, 'http://' ) === false
+				&&
+				strpos( $value, 'https://' ) === false
+				&&
+				strpos( $value, 'mailto:' ) === false
+		) {
+			$value = 'http://'.$value;
+		}
+
 		return $value;
 	}
 	
