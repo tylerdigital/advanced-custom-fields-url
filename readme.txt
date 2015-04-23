@@ -1,17 +1,19 @@
 === Advanced Custom Fields: URL Field ===
-Contributors: Tyler Digital
-Tags: PLUGIN_TAGS
+Contributors: tylerdigital, croixhaug
+Tags: Advanced Custom Fields, URL
 Requires at least: 3.5
-Tested up to: 3.9
+Tested up to: 4.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-DESCRIPTION
+Adds a URL field type to ACF that ensures a valid http/https URL is entered.
 
 == Description ==
 
-EXTENDED_DESCRIPTION
+This plugin prevent users from accidentally entering a URL without http://
+
+This Advanced Custom Field type prevents data entry error that results in a broken link on your site (like http://mysite.com/www.externalwebsite.com)
 
 = Compatibility =
 
