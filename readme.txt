@@ -18,8 +18,10 @@ This Advanced Custom Field type prevents data entry error that results in a brok
 = Compatibility =
 
 This ACF field type is compatible with:
-* ACF 5
 * ACF 4
+* ACF 5
+
+URL Fields were added as a core function of ACF 5. This plugin will not conflict with that, but is made redundant as of version 5.
 
 == Installation ==
 
