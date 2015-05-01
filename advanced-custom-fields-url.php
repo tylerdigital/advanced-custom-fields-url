@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields: URL
 Plugin URI: http://tylerdigital.com/downloads/advanced-custom-fields-url/
 Description: Adds a URL field type to ACF that ensures a valid http/https URL is entered.
-Version: 1.0.0
+Version: 1.0
 Author: Tyler Digital
 Author URI: http://tylerdigital.com
 License: GPLv2 or later

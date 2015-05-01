@@ -1,9 +1,9 @@
-=== Advanced Custom Fields: URL Field ===
+=== ACF: URL Field ===
 Contributors: tylerdigital, croixhaug
-Tags: Advanced Custom Fields, URL
+Tags: Advanced Custom Fields, ACF, URL
 Requires at least: 3.5
 Tested up to: 4.2
-Stable tag: trunk
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,9 +11,13 @@ Adds a URL field type to ACF that ensures a valid http/https URL is entered.
 
 == Description ==
 
+** This is an extension for the popular [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/) plugin. By itself, this plugin does NOTHING. **
+
 This plugin prevent users from accidentally entering a URL without http://
 
 This Advanced Custom Field type prevents data entry error that results in a broken link on your site (like http://mysite.com/www.externalwebsite.com)
+
+* Just to be sure there's no confusion... * ** This plugin does nothing unless [ACF](https://wordpress.org/plugins/advanced-custom-fields/) is active on your site **
 
 = Compatibility =
 
@@ -21,7 +25,7 @@ This ACF field type is compatible with:
 * ACF 4
 * ACF 5
 
-URL Fields were added as a core function of ACF 5. This plugin will not conflict with that, but is made redundant as of version 5.
+A URL Field was added as a core function of ACF 5. This plugin will not conflict with ACF 5, but is redundant when used with ACF 5.
 
 == Installation ==
 
@@ -32,5 +36,5 @@ URL Fields were added as a core function of ACF 5. This plugin will not conflict
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0 =
 * Initial Release.
